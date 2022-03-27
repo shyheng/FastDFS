@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>序号</td>
+        <td>姓名</td>
+        <td>文件操作</td>
+    </tr>
+    <tr th:each="list:${list}">
+        <td th:text="${listStat.count}"></td>
+        <td th:text="${list.name}"></td>
+        <td>
+            <span th:if="${list.remoteFile==null||list.remoteFile==''}">
+                <a th:href="@{|/upload/${list.id}|}">上传</a>
+            </span>
+            <span th:if="${list.remoteFile!=null&&list.remoteFile!=''}">
+                <a th:href="@{|/download/${list.id}|}">下载</a>
+                <a th:href="@{|/delete/${list.id}|}">删除</a>
+            </span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

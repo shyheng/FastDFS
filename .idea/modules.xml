@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringBootFastDFS/SpringBootFastDFS.iml" filepath="$PROJECT_DIR$/SpringBootFastDFS/SpringBootFastDFS.iml" />
       <module fileurl="file://$PROJECT_DIR$/TMa/TMa.iml" filepath="$PROJECT_DIR$/TMa/TMa.iml" />
     </modules>
   </component>
