@@ -12,7 +12,10 @@ public class T {
 
 
     public static void main(String[] args) {
-            delete();
+        long a = System.currentTimeMillis();
+        update();
+        long b = System.currentTimeMillis();
+        System.out.println(b-a);
     }
 
     public static void update() {
@@ -29,7 +32,7 @@ public class T {
              * 参数2 为需要的上传的文件的拓展名
              * 参数3 文件的属性 通常不上传
              */
-            String[] strings = storageClient.upload_file("E:\\25.jpg", "jpg", null);
+            String[] strings = storageClient.upload_file("D:\\idea2020.1激活文件.zip", "zip", null);
             for (String str : strings){
                 System.out.println(str);
             }
@@ -67,7 +70,7 @@ public class T {
              *
              */
             String groupName = "group1";
-            String remoteFilename = "M00/00/00/rBQmxmI_UDyALh21AACG4UPE48k799.jpg";
+            String remoteFilename = "M00/00/00/fN3gfWJC96CAFwgrAACG4UPE48k346.jpg";
             String localFilename = "D:/aa.jpg";
             System.out.println(storageClient.download_file(groupName, remoteFilename, localFilename));
         } catch (IOException e) {
